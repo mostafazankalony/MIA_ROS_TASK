@@ -7,7 +7,7 @@ def publisher():
     rospy.init_node ("publisher", anonymous=True)
     rate = rospy.Rate(1)
     while not rospy.is_shutdown():
-        hello_str= "hello world  %s " % rospy.get_time()
+        hello_str= "hello, my name is mostafa  %s " % rospy.get_time()
         rospy.loginfo(hello_str)
         pub.publish(hello_str)
         rate.sleep()
